@@ -1,0 +1,31 @@
+<head>
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1" />
+  <meta name="description" :content="{% if page.description  %}
+      {{page.description }}
+    {%else%}
+      {{site.description }}
+    {%endif%}"
+  >
+  <meta name="keywords" :content="{% if page.keywords  %}
+      {{page.keywords }}
+    {%else%}
+      {{site.keywords }}
+    {%endif%}"
+  >
+  {%- if jekyll.environment == 'production' -%}
+    {%- include baidu-site.html -%}
+  {%- endif -%}
+  <title>
+    {%- if page.title -%}
+      {{page.title }} - {{site.title}}
+    {%- else -%}
+      {{site.title}}
+    {%-  endif-%} 
+  </title>
+  <link href="/assets/css/main.css?v=1" rel="stylesheet" />
+  {%- if jekyll.environment == 'production' -%}
+    {%- include baidu-analytics.html -%}
+  {%- endif -%}
+</head>

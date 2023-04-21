@@ -1,0 +1,21 @@
+.markdown-body {
+  font-size: 16px;
+  padding: 0 24px;
+  img,video{
+    max-width: 100%;
+  }
+  table {
+    th,
+    td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+  }
+}
+
+blockquote{
+  padding: 3px 0 3px 15px;
+  margin: 0px;
+  background-color: #F0F0F0;
+  border-left: .2rem solid #dfe2e5;
+}
